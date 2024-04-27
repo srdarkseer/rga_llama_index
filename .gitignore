@@ -68,7 +68,6 @@ instance/
 
 # Scrapy stuff:
 .scrapy
-
 # Sphinx documentation
 docs/_build/
 
@@ -152,6 +151,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# DS store files
+.DS_Store
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

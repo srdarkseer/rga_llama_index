@@ -1,8 +1,8 @@
 # Configuration settings
 db_config = {
-    'database': 'vector_db',
+    'database': 'rag_db',
     'host': 'localhost',
-    'user': 'jerry',
+    'user': 'admin',
     'password': 'password',
     'port': 5432
 }

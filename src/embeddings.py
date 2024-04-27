@@ -1,8 +1,19 @@
 from sentence_transformers import SentenceTransformer
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+
 
 class EmbeddingManager:
-    def __init__(self, model_name="all-MiniLM-L6-v2"):
-        self.model = SentenceTransformer(model_name)
+    def __init__(self, embedded_model="all-MiniLM-L6-v2"):
+        self.embedded_model = embedded_model
+        self.embed_model = HuggingFaceEmbedding(model_name=self.embedded_model)
 
-    def get_embeddings(self, text):
-        return self.model.encode(text)
+    def get_embed_model(self):
+        return self.embed_model
+
+
+    def get_embeddings(self, query_str):
+        query_embedding = self.embed_model.get_query_embedding(query_str)
+        return query_embedding
+
+
+

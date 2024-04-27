@@ -20,3 +20,5 @@ class ModelManager:
     def load_model(self):
         # Code to load the model would go here, depending on model type
         print("Loading model from:", self.save_path)
+
+
